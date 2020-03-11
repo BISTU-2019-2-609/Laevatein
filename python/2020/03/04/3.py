@@ -12,7 +12,7 @@ def drawSnake(rad,angle,len,neckrad):
     turtle.pencolor(color[random.randint(0,5)])
     turtle.fd(rad)
     turtle.pencolor(color[random.randint(0,5)])
-    turtle.circle(neckradrad+1,180)
+    turtle.circle(neckrad+1,180)
     turtle.pencolor(color[random.randint(0,5)])
     turtle.fd(rad*2/3)
     turtle.pencolor(color[random.randint(0,5)])
