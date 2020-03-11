@@ -1,0 +1,5 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.pythonPath": "/usr/bin/python3",
+    "python.linting.enabled": false
+}
