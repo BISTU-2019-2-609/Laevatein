@@ -1,10 +1,13 @@
-num=int(input("请输入一个数字："))
-tenth=int(num/10000)
-th=int((num-tenth*10000)/1000)
-hu=int((num-tenth*10000-th*1000)/100)
-ten=int((num-tenth*10000-th*1000-hu*100)/10)
-one=num-tenth*10000-th*1000-hu*100-ten*10
-if(tenth==one and th==ten):
-    print("这是一个回文数")
+num=input("请输入一个数字：")
+num1=""
+try:
+    int(num)
+except:
+    print("您输入的不是一个数字")
+    exit(-1)
+for i in range(len(num)-1,-1,-1):
+    num1=num1+num[i]
+if num1==num:
+    print("您输入的是回文数")
 else:
-    print("这不是一个回文数")
+    print("您输入的不是回文数")
