@@ -1,6 +1,4 @@
 import time
-print("Starting",end="\r")
-time.sleep(1)
-print("Starting ...",end="\r")
+print("Starting ... ",flush=true)
 time.sleep(5)
-print("Starting ... Done!")
+print("Starting ... Done!",flush=true)
