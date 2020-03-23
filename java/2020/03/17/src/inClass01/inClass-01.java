@@ -1,4 +1,4 @@
-package Inclass;
+package inClass01;
 
 import java.util.Scanner;
 
@@ -37,7 +37,7 @@ class A {
             }
         }
         while(true){
-            System.out.print("请输入第一个运算数：");
+            System.out.print("请输入第一个运算数（若3个数求和则必须为整数）：");
             if(getInput.hasNextDouble()&&nums==2){
                 d=getInput.nextDouble();
                 ifDouble=true;
@@ -51,7 +51,7 @@ class A {
             }
         }
         while(true){
-            System.out.print("请输入第二个运算数：");
+            System.out.print("请输入第二个运算数（若3个数求和则必须为整数）：");
             if((getInput.hasNextDouble()&&nums==2) || ifDouble){
                 e=getInput.nextDouble();
                 if(!ifDouble){

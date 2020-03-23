@@ -1,4 +1,4 @@
-package Finialclass;
+package afterClass01;
 
 import java.util.Scanner;
 
@@ -6,19 +6,19 @@ import java.util.Scanner;
 **输入成绩，输出对应等级
 */
 
-class Finialclass01 {
+class afterClass01 {
     public static void main(String[] args) {
         Scanner getInput = new Scanner(System.in);
         int grade = 0;
-        System.out.println("请输入学生成绩：");
+        System.out.print("请输入学生成绩：");
         if(getInput.hasNextInt()){
             grade = getInput.nextInt();
         } else {
             System.out.println("输入不合规！");
             System.exit(1);
         }
-        Finialclass01 finialclass01 = new Finialclass01();
-        finialclass01.printGrade(grade);
+        afterClass01 afterClass01 = new afterClass01();
+        afterClass01.printGrade(grade);
         getInput.close();
     }
 

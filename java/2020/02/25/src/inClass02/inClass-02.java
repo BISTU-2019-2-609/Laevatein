@@ -1,4 +1,6 @@
-class Inclass_02 {
+package inClass02;
+
+class inClass02 {
     public static void main(String[] args) {
         System.out.println("Hello,Java!");
         System.out.println("我是孔德辰");  //此处***应该是自己的姓名

@@ -1,4 +1,6 @@
-class Finial_01 {
+package afterClass02;
+
+class afterClass02 {
     public static void main(String[] args) {
     System.out.println("Hello World!");
     int a = 1;

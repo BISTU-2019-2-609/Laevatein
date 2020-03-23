@@ -1,4 +1,4 @@
-package Finialclass;
+package afterClass02;
 
 import java.util.Scanner;
 

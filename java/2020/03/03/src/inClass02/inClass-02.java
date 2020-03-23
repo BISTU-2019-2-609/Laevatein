@@ -1,4 +1,4 @@
-package Inclass;
+package inClass02;
 
 import java.util.Scanner;
 
@@ -6,12 +6,12 @@ import java.util.Scanner;
 ** 输入五个数进行求和
 */
 
-class Inclass0201 {
+class inClass0201 {
     public static void main(String[] args) {
         Scanner getInput = new Scanner(System.in);
         int i=1,sum=0;
         while(i<=5){
-            System.out.println("请输入第 "+i+" 个数：");
+            System.out.print("请输入第 "+i+" 个数：");
             sum=sum+getInput.nextInt();
             i=i+1;
         }
@@ -24,7 +24,7 @@ class Inclass0201 {
 **比较用户输入的两个数的大小
 */
 
-class Inclass0202 {
+class inClass0202 {
     public static void main(String[] args) {
         Scanner getInput = new Scanner(System.in);
         int a1=0,a2=0;
@@ -63,7 +63,7 @@ class Inclass0202 {
                 System.exit(1);
             }
         }
-        Inclass0202 inclass0302 = new Inclass0202();
+        inClass0202 inclass0302 = new inClass0202();
         if(ifDouble){
             System.out.println("两个数中大的是："+inclass0302.max(b1, b2));
         } else {
