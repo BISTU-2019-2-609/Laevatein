@@ -1,17 +1,20 @@
 package inClass03;
 
 class Point{
-    private double x = Math.random()*13,y = Math.random()*19;
+    private double x,y; //点坐标值
 
+    //不设置初始坐标定义一个点
     public Point(){
-
+        this.x=Math.random()*10;
+        this.y=Math.random()*15;
     }
-
+    //定义给定坐标的点
     public Point(double x,double y){
         this.x=x;
         this.y=y;
     }
 
+    //移动点
     public Point movePoint(int dx,int dy){
         return new Point(this.x+dx,this.y+dy);
     }
