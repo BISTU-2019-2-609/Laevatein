@@ -48,8 +48,13 @@ class Vehicle{
 class vehicleTest{
     public static void main(String[] args) {
         Vehicle vehicle = new Vehicle();
-        Input inputer = new Input();
-        vehicle.setSpeed(inputer.getFloat("请输入机车初速度："));
-        System.out.printf("机车初始速度为：%f\n加速10后为：%f\n加速15后为：%f\n降速50后为：%f\n降速20后为：%f\n",vehicle.getSpeed(),vehicle.speedUp(10),vehicle.speedUp(15),vehicle.speedDown(50),vehicle.speedDown(20));
+        Input getInput = new Input();
+        vehicle.setSpeed(getInput.getFloat(0,240,"请输入机车初速度："));
+        System.out.printf("机车初始速度为：%f\n",vehicle.getSpeed());
+        System.out.printf("加速10后为：%f\n",vehicle.speedUp(10));
+        System.out.printf("加速15后为：%f\n",vehicle.speedUp(15));
+        System.out.printf("降速50后为：%f\n", vehicle.speedDown(50));
+        System.out.printf("降速20后为：%f\n", vehicle.speedDown(20));
+        getInput.close();
     }
 }
