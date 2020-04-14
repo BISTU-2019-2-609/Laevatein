@@ -1,0 +1,63 @@
+@startuml inclass02
+class Person {
+    -name: String
+    -address: String
+    -phone: String
+    -email: String
+    +Person()
+    +Person(name: String, address: String)
+    +Person(name: String, address: String, phone: String, email: String)
+    +toString(): String
+}
+
+class Employee {
+    -office: String
+    -salary: double
+    -data: MyData
+    +Employee()
+    +Employee(name: String, address: String, phone: String, email: String, office: String, salary: double, date: MyDate)
+    +toString():String
+}
+
+class MyData {
+    -year:int
+    -month:int
+    -day:int
+    +MyDate()
+    +MyDate(year: int, month: int, day: int)
+    +toString(): String
+}
+
+class Student {
+    -grade: int
+    +Student()
+    +Student(grade: int)
+    +Student(name: String, address: String, phone: String, email: String, grade: int)
+    +toString(): String
+}
+
+class Faculty {
+    -workTime: String
+    -level: String
+    +Faculty()
+    +Faculty(workTime: String, level: String)
+    +Faculty(name: String, address: String, phone: String, email: String, office: String, salary: double, data: MyData, workTime: String, level: String)
+    +toString(): String
+}
+
+class Staff {
+    -title: String
+    +Staff()
+    +Staff(Title: String)
+    +Staff(name: String, address: String, phone: String, email: String, office: String, salary: double, data: MyData title: String)
+    +toString(): String
+}
+
+Person <|-- Employee
+Employee o-- MyData
+Person <|-- Student
+Employee <|--Faculty
+Employee <|-- Staff
+Faculty o-- MyData
+Staff o-- MyData
+@enduml
