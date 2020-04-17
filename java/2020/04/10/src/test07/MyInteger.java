@@ -61,4 +61,16 @@ public class MyInteger {
     static public boolean isPrime(MyInteger integer) {
         return isPrime(integer.value);
     }
+
+    public boolean equals(int value) {
+        if (this.value == value) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean equals(MyInteger integer) {
+        return this.equals(integer.value);
+    }
 }
