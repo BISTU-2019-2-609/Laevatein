@@ -20,5 +20,6 @@ public class TestBMI {
         System.out.println("年龄" + age);
         System.out.println("体重指数：" + bmi.getBMI());
         System.out.println("体重状况：" + bmi.getStatus());
+        inputer.close();
     }
 }
