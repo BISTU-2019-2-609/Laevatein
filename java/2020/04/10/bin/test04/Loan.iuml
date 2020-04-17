@@ -1,0 +1,29 @@
+@startuml test04
+
+Class Loan {
+    -annualInterestRate: double
+    -numberOfYears: int
+    -loanAmount: double
+    loanDate: Date
+    +Loan(annualInterestRate: double, numberOfYears: int, loanAmount: double, loanDate: Date)
+    +Loan()
+    +setLoanDate(): void
+    +getLoanDate(): double
+    +getMonthlyPayment(): double
+    +getTotalPayment(): double
+}
+
+class Date {
+    -fastTime: long
+    +Date()
+}
+
+class Math {
+    a: double
+    b:double
+    +pow(a: double, b: double)
+}
+
+Loan o-- Date
+Loan o-- Math
+@enduml
