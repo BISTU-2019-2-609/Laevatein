@@ -1,0 +1,18 @@
+@startuml MyInterger
+class MytInteger {
+    -int value
+    +MyInteger(value: int)
+    +getValue(): int
+    +static isEven(value: int): boolean
+    +static isOdd(value: int): boolean
+    +static isPrime(value: int): boolean
+    +isEven(): boolean
+    +isOdd(): boolean
+    +isPrime(): boolean
+    +static isEven(integer: MyInteger): boolean
+    +static isOdd(integer: MyInteger): boolean
+    +static isPrime(integer: MyInteger): boolean
+    +equals(value: int): boolean
+    +equals(integer: MyInteger): boolean
+}
+@enduml
