@@ -1,7 +1,11 @@
 package test07;
 
+/**
+ * @author Laevatein
+ */
 public class MyInteger {
     private int value;
+    static final int EVEN_IF = 2;
 
     public MyInteger(int value) {
         this.value = value;
@@ -15,7 +19,7 @@ public class MyInteger {
     }
 
     static public boolean isEven(int value) {
-        if (value % 2 == 0) {
+        if (value % EVEN_IF == 0) {
             return true;
         } else {
             return false;
@@ -31,9 +35,8 @@ public class MyInteger {
         while (i > 1) {
             if (value % i == 0) {
                 return false;
-            } else {
-                break;
             }
+            i++;
         }
         return true;
     }

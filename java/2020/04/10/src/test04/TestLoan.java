@@ -4,6 +4,9 @@ import java.util.Date;
 
 import io.Input;
 
+/**
+ * @author Laevatein
+ */
 public class TestLoan {
     public static void main(String[] args) {
         Input inputer = new Input();

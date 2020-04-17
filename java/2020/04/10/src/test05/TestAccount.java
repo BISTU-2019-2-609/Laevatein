@@ -2,6 +2,9 @@ package test05;
 
 import io.Input;
 
+/**
+ * @author Laevatein
+ */
 public class TestAccount {
     public static void main(String[] args) {
         Input inputer = new Input();
