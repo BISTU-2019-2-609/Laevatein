@@ -1,0 +1,34 @@
+@startuml challenge
+class Point {
+    -x: double
+    -y: double
+    +Point()
+    +Point(x: double, y: double)
+    +setX(x: double): void
+    +setY(y: double): void
+    +getX(): double
+    +getY(): double
+    + static distance(p1: Ponit, p2: Point): double
+    + distance(Point p): double
+}
+
+class Circle {
+    -p: Point
+    -radius: double
+    +Circle()
+    +Circle(p: Point, radius: double)
+    +Circle(x: double, y: double, radius: double)
+    +setP(p: Point): void
+    +setRadius(radius: double): void
+    +getP(): Point
+    +getRadius(): double
+    +getArea(): double
+    +getPerimeter(): double
+    +contains(x: double, y: double): boolean
+    +contains(p: Point): boolean
+    +contains(circle: Circle): boolean
+    +overlaps(circle: Circle): boolean
+}
+
+Point o-- Circle
+@enduml
