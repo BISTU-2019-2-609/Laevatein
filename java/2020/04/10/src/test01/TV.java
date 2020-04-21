@@ -79,51 +79,27 @@ public class TV {
      * 使频道递增
      */
     public void channelUp() {
-        if (!on) {
-            System.out.println("电视未开机，调整失败！");
-        } else if (this.channel + 1 > CHANNEL_MAX) {
-            System.out.println("超出范围，调整失败！");
-        } else {
-            this.channel = this.channel + 1;
-        }
+        setChannel(channel + 1);
     }
 
     /**
      * 使频道递减
      */
     public void channelDown() {
-        if (!on) {
-            System.out.println("电视未开机，调整失败！");
-        } else if (this.channel - 1 < CHANNEL_MIN) {
-            System.out.println("超出范围，调整失败！");
-        } else {
-            this.channel = this.channel - 1;
-        }
+        setChannel(channel - 1);
     }
 
     /**
      * 使音量递增
      */
     public void volumUp() {
-        if (!on) {
-            System.out.println("电视未开机，调整失败！");
-        } else if (volumLevel + 1 > VOLUM_MAX) {
-            System.out.println("超出范围，调整失败！");
-        } else {
-            this.volumLevel = this.volumLevel + 1;
-        }
+        setVolum(volumLevel + 1);
     }
 
     /**
      * 使音量递减
      */
     public void volumDown() {
-        if (!on) {
-            System.out.println("电视未开机，调整失败！");
-        } else if (volumLevel - 1 < VOLUM_MIN) {
-            System.out.println("超出范围，调整失败！");
-        } else {
-            this.volumLevel = this.volumLevel - 1;
-        }
+        setVolum(volumLevel - 1);
     }
 }
