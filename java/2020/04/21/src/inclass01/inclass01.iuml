@@ -1,0 +1,27 @@
+@startuml inclass01
+class Point {
+    -x :double
+    -y :double
+    +Point()
+    +Point(x: double, y: double)
+    +static distance(p1: Point, p2: Point)
+    +distance(p: Point)
+    +toString(): String
+    +equals(obj: Object): boolean
+}
+
+class Circle {
+    -o: Point
+    -radius: double
+    +Circle()
+    +Circle(o: Point, radius: double)
+    +Circle(x: double, y: double, radius: double)
+    +getArea(): double
+    +getPerimeter(): double
+    +contains(circle: Circle): boolean
+    +overlaps(circle: Circle): boolean
+    +toString(): String
+    +equals(obj: Object): boolean
+}
+Point --o Circle
+@enduml
