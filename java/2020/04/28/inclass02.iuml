@@ -1,0 +1,31 @@
+@startuml inclass02
+abstract class GeometricObject {
+    -color: String
+    -filled: boolean
+    +GeometricObject()
+    +GeometricObject(color: String, filled: boolean)
+    abstract getArea(): double
+    abstract getPerimeter(): double
+}
+
+class Rectangle {
+    -width: double
+    -height: double
+    +Rectangle()
+    +Rectangle(width: double, height: double)
+    +getArea(): double
+    +getPerimeter(): double
+}
+
+class Triangle {
+    -side1: double
+    -side2: double
+    -side3: double
+    +Triangle()
+    +Triangle(side1: double, side2: double, side3: double)
+    +getArea(): double
+    +getPerimeter(): double
+}
+GeometricObject <|-- Rectangle
+GeometricObject <|-- Triangle
+@enduml
