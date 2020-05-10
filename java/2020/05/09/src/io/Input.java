@@ -1,18 +1,20 @@
 package io;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * @author Laevatein
  */
 public class Input {
-    Scanner inputer;
+    static Scanner inputer = new Scanner(System.in);
+    static Logger inputerLogger = Logger.getLogger("inputer");
     
     /**
      * 构造一个Scanner
      */
     public Input() {
-        this.inputer = new Scanner(System.in);
+
     }
 
     /**
@@ -22,11 +24,11 @@ public class Input {
      */
     public int getInt(String notice) {
         while (true) {
-            System.out.print(notice);
+            inputerLogger.info(notice);
             if (inputer.hasNextInt()) {
                 return inputer.nextInt();
             } else {
-                System.out.println("输入不合规，请重新输入！");
+                inputerLogger.warning("输入不合规，请重新输入！");
                 inputer.next();
             }
         }
@@ -45,7 +47,7 @@ public class Input {
             if (inputed >= min && inputed <= max) {
                 return inputed;
             } else {
-                System.out.println("输入不合规，请重新输入！"); 
+                inputerLogger.warning("输入不合规，请重新输入！"); 
             }
         }
     }
@@ -57,11 +59,11 @@ public class Input {
      */
     public float getFloat(String notice) {
         while (true){
-            System.out.print(notice);
+            inputerLogger.info(notice);
             if (inputer.hasNextFloat()) {
                 return inputer.nextFloat();
             } else {
-                System.out.println("输入不合规，请重新输入！");
+                inputerLogger.warning("输入不合规，请重新输入！");
                 inputer.next();
             }
         }
@@ -80,7 +82,7 @@ public class Input {
             if (inputed >= min && inputed <= max) {
                 return inputed;
             } else {
-                System.out.println("输入不合规，请重新输入！"); 
+                inputerLogger.warning("输入不合规，请重新输入！"); 
             }
         }
     }
@@ -92,11 +94,11 @@ public class Input {
      */
     public double getDouble(String notice) {
         while (true) {
-            System.out.print(notice);
+            inputerLogger.info(notice);
             if (inputer.hasNextDouble()) {
                 return inputer.nextDouble();
             } else {
-                System.out.println("输入不合规，请重新输入！");
+                inputerLogger.warning("输入不合规，请重新输入！");
                 inputer.next();
             }
         }
@@ -115,18 +117,18 @@ public class Input {
             if (inputed >=min && inputed <= max) {
                 return inputed;
             } else {
-                System.out.println("输入不合规，请重新输入！"); 
+                inputerLogger.warning("输入不合规，请重新输入！"); 
             }
         }
     }
 
     public String getLine(String notice) {
         while (true) {
-            System.out.print(notice);
+            inputerLogger.info(notice);
             if (inputer.hasNext()) {
                 return inputer.next();
             } else {
-                System.out.println("输入不合规，请重新输入！");
+                inputerLogger.warning("输入不合规，请重新输入！");
                 inputer.next();
             }
         }
@@ -135,7 +137,7 @@ public class Input {
     /**
      * 关闭Scanner
      */
-    public void close() {
-        this.inputer.close();
+    public static void close() {
+        inputer.close();
     }
 }
