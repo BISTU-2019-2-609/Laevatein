@@ -1,0 +1,7 @@
+1. Circle[] circles = new Circle[3];
+将Circle[] circles入栈，并在堆中创建与之关联的 circles[0], circles[1], circles[2]
+2. private static int instanceNumber = 0；
+在数据区创建 instanceNumber
+3. circles[0] = new Circle();
+将一个 circle 类对象入栈，并使 circles[0] 指向它，同时在堆中创建与之关联的 radius
+4. 同上使 circles[1] 和 circle[2] 获得指向
