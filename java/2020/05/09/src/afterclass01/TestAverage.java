@@ -17,5 +17,6 @@ public class TestAverage {
             nums[i] = inputer.getDouble(String.format("输入第%d个数：", i+1));
         }
         logger.info(String.format("这%d个数的平均值为：", Average.NUMBER_OF_AVERAGE) + Average.average(nums));
+        inputer.close();
     }
 }

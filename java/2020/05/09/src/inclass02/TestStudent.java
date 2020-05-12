@@ -16,5 +16,6 @@ public class TestStudent {
         String org = inputer.getLine("请输入组织名：");
         Student stu1 = new Student(name, Student.JUNIOR);
         logger.info(stu1.toString() + "Organization: " + stu1.volunteer(org));
+        inputer.close();
     }
 }
