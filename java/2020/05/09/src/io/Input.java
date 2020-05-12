@@ -137,7 +137,7 @@ public class Input {
     /**
      * 关闭Scanner
      */
-    public static void close() {
+    public void close() {
         inputer.close();
     }
 }
