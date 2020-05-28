@@ -1,6 +1,7 @@
 from requests import get
 from os import system
 from lxml import etree
+from sys import platform
 
 URL = "https://piao.qunar.com/ticket/list.htm?keyword=%E5%8C%97%E4%BA%AC&region=%E5%8C%97%E4%BA%AC&page={}"
 URL_HADE = "https://piao.qunar.com"
@@ -8,9 +9,19 @@ TITTLE = "//*[@id=\"search-list\"]/div[{}]/div/div[2]/h3/a/text()"
 HREF = "//*[@id=\"search-list\"]/div[{}]/div/div[2]/h3/a/@href"
 DESCRIPTION = "//*[@id=\"mp-charact\"]/div[1]/div[1]/div[1]/p/text()"
 
+if (platform in ["win32", "cygwin"]):
+    SYSTEM_FLAG = "nt"
+elif (platform in ["linux", "darwin"]):
+    SYSTEM_FLAG = "unix"
+
 def clearScreen():
-    system("cls")
-    system("clear")
+    if (SYSTEM_FLAG == "nt"):
+        system("cls")
+    elif (SYSTEM_FLAG == "unix"):
+        system("clear")
+    else:
+        system("cls")
+        system("clear")
 
 def printProgrammeDescription():
     clearScreen()
@@ -49,8 +60,8 @@ def getAttractionDescription(Url):
         page = get(Url)
         page = etree.HTML(page.text)
         attractionDescription = page.xpath(DESCRIPTION)
-        #if (attractionDescription == ""):
-            #raise ConnectionError()
+        if (attractionDescription == ""):
+            raise ConnectionError()
         return attractionDescription
     except:
         print("网络错误，请稍后重试")
