@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['quna.py'],
-             pathex=['D:\\bistu\\python\\2020\\05\\27'],
+             pathex=['/home/laevatein/bistu/python/2020/05/27'],
              binaries=[],
              datas=[],
              hiddenimports=[],
