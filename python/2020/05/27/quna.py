@@ -93,7 +93,6 @@ def main():
                 continue
             pageNumber = command[1:]
             attractions = getPageContent(pageNumber)
-            printAttractionList(pageNumber, attractions)
         elif (command.find(".") != -1):
             attractionIndex = command[command.index(".") + 1:]
             try:
