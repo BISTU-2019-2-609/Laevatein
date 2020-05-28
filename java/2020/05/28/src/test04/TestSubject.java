@@ -107,7 +107,7 @@ public class TestSubject {
                 while (true) {
                     String teacherName = inputer.getLine("请输入姓名：");
                     if (! Teacher.ifTeacher(teacherName)) {
-                        System.out.println("该教师不存咋，请重新输入");
+                        System.out.println("该教师不存在，请重新输入");
                         continue;
                     } else {
                         teacherOperation(Teacher.getTeacher(teacherName));
