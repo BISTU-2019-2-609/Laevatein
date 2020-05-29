@@ -39,15 +39,6 @@ public class Subject {
         return subjects.contains(subjectName);
     }
 
-    public static String viewSubject() {
-        String subjectsName = "";
-        for (int i = 0; i < subjects.size(); i++) {
-            subjectsName += subjects.get(i);
-            subjectsName += "\n";
-        }
-        return subjectsName;
-    }
-
     /**
      * 将学生添加到课程中
      * @param studentName 学生名
@@ -95,6 +86,6 @@ public class Subject {
      */
     public static String toString(String subjectName) {
         int i = subjects.indexOf(subjectName);
-        return String.format("学生名单：%s教师名单：%s", personList.get(i).get(0), personList.get(i).get(1));
+        return String.format("学生名单：%s\n教师名单：%s", personList.get(i).get(0), personList.get(i).get(1));
     }
 }
