@@ -19,7 +19,7 @@ public class Teacher {
     private int age;
     private int id;
 
-    ArrayList<String> subjectList = new ArrayList<String>();
+    private ArrayList<String> subjectList = new ArrayList<String>();
 
     /**
      * 添加一名新教师
