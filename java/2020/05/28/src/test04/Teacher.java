@@ -7,19 +7,13 @@ import java.util.logging.Logger;
  * 教师选课数据
  * @author Laevatein
  */
-public class Teacher {
+public class Teacher extends Person{
 
     private static Logger logger = Logger.getLogger("Teacher");
     private static ArrayList<String> teacherNameList = new ArrayList<String>();
     private static ArrayList<Teacher> teacherList = new ArrayList<Teacher>();
 
     private final int MAX_SUBJECTS = 3;
-
-    private String name;
-    private int age;
-    private int id;
-
-    private ArrayList<String> subjectList = new ArrayList<String>();
 
     /**
      * 添加一名新教师
@@ -28,9 +22,7 @@ public class Teacher {
      * @param id 工号
      */
     public Teacher(String name, int age, int id) {
-        this.name = name;
-        this.age = age;
-        this.id = id;
+        super(name, age, id);
         teacherNameList.add(name);
         teacherList.add(this);
     }

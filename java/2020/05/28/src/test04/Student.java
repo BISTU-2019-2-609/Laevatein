@@ -7,19 +7,13 @@ import java.util.logging.Logger;
  * 学生选课数据
  * @author Laevatein
  */
-public class Student {
+public class Student extends Person {
 
     private static Logger logger = Logger.getLogger("Student");
     private static ArrayList<String> studentNameList = new ArrayList<String>();
     private static ArrayList<Student> studentList = new ArrayList<Student>();
 
     private final int MAX_SUBJECTS = 5;
-
-    private String name;
-    private int age;
-    private int id;
-
-    private ArrayList<String> subjectList = new ArrayList<String>();
 
     /**
      * 添加一名新学生
@@ -28,9 +22,7 @@ public class Student {
      * @param id 学号
      */
     public Student(String name, int age, int id) {
-        this.name = name;
-        this.age = age;
-        this.id = id;
+        super(name, age, id);
         studentNameList.add(name);
         studentList.add(this);
     }
