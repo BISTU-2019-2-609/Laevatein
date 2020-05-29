@@ -1,0 +1,46 @@
+@startuml Subject
+class Person {
+    * name: String
+    * age: int
+    * id: int
+    * subjectList: ArrayList<String>
+    * Person(name: String, age: int, id: int)
+}
+class Student {
+    - {static} studentNameList: ArrayList<String>
+    - {static} studentList: ArrayList<Student>
+    + Student(name: String, age: int, id: int)
+    + view(): String
+    + ifStudent(studentName: String): boolean
+    + getStudent(studentName: String): Student
+    + add(subjectName: String): void
+    + remove(subjectName: String): void
+    + toString(): String
+}
+Person <|-- Student
+class Teacher {
+    - {static} teacherNameList: ArrayList<String>
+    - {static} teacherList: ArrayList<Teacher>
+    + Teacher(name: String, age: int, id: int)
+    + view(): String
+    + ifTeacher(teacherName: String): boolean
+    + getTeacher(teacherName: String): Teacher
+    + add(subjectName: String): void
+    + remove(subjectName: String): void
+    + toString(): String
+}
+Person <|-- Teacher
+class Subject {
+    - {static} subjects: ArrayList<String>
+    - {static} personList: ArrayList<ArrayList<ArrayList<String>>>
+    + {static} addSubject(subjectName: String): void
+    + {static} ifSubject(subjectName: String): void
+    + {static} addStudent(studentName: String, subjectName: String): void
+    + {static} removeStudent(studentName: String, subjectName: String): void
+    + {static} addTeacher(teacherName: String, subjectName: String): void
+    + {static} removeTeacher(teacherName: String, subjectName: String): void
+    + {static} toString(subjectName: String): String
+}
+Subject o-- Student
+Subject o-- Teacher
+@enduml
