@@ -6,7 +6,7 @@ public class Electrical implements Comparable<Electrical> {
     protected double length;
     protected double width;
     protected double height;
-    protected static double num = 0;
+    protected static int num = 0;
 
     @SuppressWarnings("all")
     protected Electrical() {
