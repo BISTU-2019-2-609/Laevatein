@@ -6,7 +6,7 @@ public class TestFruit {
         Fruit[] fruits={new Cherry("江苏",15,2,0.8),new Mango(12,2,0.95),new Cherry(28,3,0.7)};
  //输出水果信息
          System.out.println("----------------------------");
-        for(int i=0;i<fruits.length;i++)
+        for(int i = 0; i < fruits.length; i++)
           fruits[i].display();
          System.out.println("----------------------------");
          //输出水果的总价钱
